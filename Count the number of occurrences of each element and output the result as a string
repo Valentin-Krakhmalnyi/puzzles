@@ -1,0 +1,11 @@
+function objectEntriesJoin(str){
+  str = str.toLowerCase();
+  let obj = {};
+  for(let i = 0; i < str.length; i++){
+    if(obj[str[i]]) obj[str[i]]++;
+    else obj[str[i]] = 1;
+  }
+  const value = Object.entries(obj);
+  return value.join(' ');
+}
+console.log(function objectEntriesJoin('All the puzzles has solution!'));
