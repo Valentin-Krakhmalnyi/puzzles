@@ -1,0 +1,11 @@
+function objectValues(str){
+  let newStr = str.toLowerCase();
+  let obj = {};
+  for(let i = 0; i < newStr.length; i++){
+    if(obj[newStr[i]]) obj[newStr[i]]++;
+    else obj[newStr[i]] = 1;
+  }
+  const values = Object.values(obj);
+  return values;
+}
+console.log(objectValues('All puzzles has solution!'))
