@@ -1,0 +1,12 @@
+function objectEntries(arr){
+  let obj = {};
+  for (let i = 0; i < arr.length; i++){
+  for (let j = 0; j < arr[i].length; j++) {
+  arr[i] = arr[i].toLowerCase();
+  if (obj[arr[i][j]]) obj[arr[i][j]]++
+  else obj[arr[i][j]] = 1;
+    }
+  }
+  return Object.entries(obj);
+}
+console.log(objectEntries(['pOol', 'Loud']));
