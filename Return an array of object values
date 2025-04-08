@@ -8,4 +8,4 @@ function objectValues(str){
   const values = Object.values(obj);
   return values;
 }
-console.log(objectValues('All puzzles has solution!'))
+console.log(objectValues('All the puzzles has solution!'))
