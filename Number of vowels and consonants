@@ -1,0 +1,13 @@
+function countLetters(str){
+str = str.trim().toLowerCase();
+let vowels = 'euioa';
+let consonants = 'qwrtypsdfghjklzxcvbnm';
+let counterVowels = 0;
+let counterConsonants = 0;
+for(let i = 0; i < str.length; i++) {
+if(vowels.includes(str[i])) counterVowels++;
+if(consonants.includes(str[i])) counterConsonants++;
+}
+return {vowel: counterVowels, consonant: counterConsonants};
+}
+console.log(countLetters('All the puzzles has solution'));
