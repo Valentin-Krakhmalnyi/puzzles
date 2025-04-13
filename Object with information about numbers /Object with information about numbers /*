@@ -1,0 +1,21 @@
+function getNumbersInfo(str){
+  str = str.trim();
+  if(str === '' || str === ' ') return 'String is empty';
+  let counter = {
+  negatives: 0,
+  positives: 0,
+  zeros: 0,
+  odds: 0,
+  evens: 0
+  }
+    const arr = str.split(' ');
+    for(let i = 0; i < arr.length; i++){
+    if(+arr[i] < 0) counter.negatives++;
+    if(+arr[i] > 0) counter.positives++;
+    if(+arr[i] === 0) counter.zeros++;
+    if(+arr[i] % 2 === 0) counter.evens++;
+    if(+arr[i] % 2 !== 0) counter.odds++;
+    }
+    return counter;
+}
+console.log(getNumbersInfo('All the puzzles has solution!'))
